@@ -116,7 +116,7 @@ function processResponses(itemResponses) {
         var file = DriveApp.getFileById(imageID);
         var fileName = file.getName();
         fileName = fileName.split(" - ")[0]; // remove the user name that Google appends to the file name
-        file.setName(fileName); // rename the file to remove user name
+        file.setName(fileName  + '.jpg'); // rename the file to remove user name, and convert filetype from NONE to jpeg
         answerString += fileName + "\n"; // each image file name starts on a new line
       }
     }
